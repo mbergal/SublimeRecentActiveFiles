@@ -29,7 +29,7 @@ class RecentActiveFilesCommand(sublime_plugin.WindowCommand):
 
             def on_done(index):
                 if index >= 0:
-                    self.window.open_file(self.recent_active_files[index])
+                    self.window.open_file( items[index][1] )
                 else:
                     if len(self.recent_active_files) > 0:
                         self.window.open_file(self.recent_active_files[0])
